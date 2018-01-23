@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Where should I contribute type declarations to?</title>
+  <link rel="stylesheet" type="text/css" href="build/build.css">
+</head>
+
+<body>
+  <div id="presentation" class="typescript-presentation">
+    <section>
+      <h1>What type of developer are you?</h1>
+      <a href="#author-how-package-authored" class="choice">
+        I'm a library owner.
+      </a>
+      <a href="#user-whats-the-maintainer-like" class="choice">
+        I'm a library user/contributor.
+      </a>
+
+    </section>
+
+    <section id="author-how-package-authored">
+      <h1>How is your library authored?</h1>
+      <a href="#library-already-in-typescript" class="choice">
+        My library is written in TypeScript.
+      </a>
+      <a href="#wanna-rewrite-lots-of-fun" class="choice">
+        My package is in plain JavaScript
+      </a>
+    </section>
+
+    <section id="wanna-rewrite-lots-of-fun">
+      <h1>Would you ever consider rewriting your library in TypeScript?</h1>
+      <a href="#rewrite-all-the-things" class="choice">
+        Yes, and I'm very interested in doing so.
+      </a>
+      <a href="#wanna-maintain-declaration-files-lots-of-fun" class="choice">
+        No, I'm not sure if I'd be willing to do that.
+      </a>
+    </section>
+
+    <section id="wanna-maintain-declaration-files-lots-of-fun">
+      <h1>Do you feel confident maintaining TypeScript declaration files?</h1>
+      <a href="#hahaha-yeah-okay" class="choice">
+        Yes, I'm extremely experienced with ECMAScript modules, TypeScript, package management, versioning, and declaration&nbsp;files.
+      </a>
+      <a href="#at-least-youre-honest" class="choice">
+        Ehh...
+      </a>
+    </section>
+
+    <section id="hahaha-yeah-okay">
+      <h1>How do you feel about semver?</h1>
+      <a href="#i-break-peoples-builds" class="choice">
+        I would publish a patch version to npm for issues with the declaration files, even if doing so would technically be a break.
+      </a>
+      <a href="#i-dont-break-peoples-builds" class="choice">
+        I am extremely conscious of semver for all users of my library.
+      </a>
+    </section>
+
+    <section id="library-already-in-typescript">
+      <p>Ship your declaration files side-by-side with your JS by using the
+        <code>--declaration</code> flag.</p>
+      <p>If you plan to use the
+        <code>"main"</code> field to point to a
+        <code>.js</code> file in your
+        <code>package.json</code>, make sure you set a respective
+        <code>"types"</code> field pointing to the respective
+        <code>.d.ts</code> file as well.</p>
+    </section>
+
+    <section id="user-whats-the-maintainer-like">
+      <h1>Does the library author feel confident using TypeScript?</h1>
+      <a href="#have-them-call-me" class="choice">
+        The author of this knows TypeScript and is enthusiastic about maintaining TypeScript.
+      </a>
+      <a href="#dont-bother-the-author" class="choice">
+        The author of this package does not know TypeScript, or is ambivalent about maintaining
+        <code>.d.ts</code> files.
+      </a>
+    </section>
+
+    <section id="rewrite-all-the-things">
+      <p>Do it! TypeScript has lots of awesome benefits that can even plain JavaScript users can benefit from.</p>
+      <p>What's even better is that your JavaScript users will never have to know your library is written in TypeScript.</p>
+      <a href="#library-already-in-typescript" class="choice">
+        Okay, what do I do after I rewrite my library?
+      </a>
+    </section>
+
+    <section id="at-least-youre-honest">
+      <p>Redirect users of your library to contribute to
+        <a href="https://github.com/DefinitelyTyped/DefinitelyTyped/">DefinitelyTyped</a>.</p>
+    </section>
+
+    <section id="i-break-peoples-builds">
+      <p>You may still want to consider leveraging
+        <a href="https://github.com/DefinitelyTyped/DefinitelyTyped/">DefinitelyTyped</a>, but
+        <a href="https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html">shipping
+          <code>.d.ts</code> files in your package</a>
+        will work well for users.
+      </p>
+    </section>
+
+    <section id="i-dont-break-peoples-builds">
+      <p>Rely on
+        <a href="https://github.com/DefinitelyTyped/DefinitelyTyped/">DefinitelyTyped</a> for distributing types for your package.
+        That way, users can have more flexibility in aligning <code>.d.ts</code> files with your library.
+      </p>
+    </section>
+
+    <section id="have-them-call-me">
+      <p>Have the library author run through this web page before making any contributions. :)</p>
+    </section>
+
+    <section id="dont-bother-the-author">
+      <p>Send all declaration files to
+        <a href="https://github.com/DefinitelyTyped/DefinitelyTyped/">DefinitelyTyped</a>. Perhaps give the author a heads up that you're making this contribution so that they can redirect
+        other library consumers and contributors to DefinitelyTyped for type declarations.</p>
+    </section>
+  </div>
+
+  <script src="build/build.js"></script>
+
+</body>
+
+</html>
